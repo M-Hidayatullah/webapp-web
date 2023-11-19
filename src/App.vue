@@ -1,25 +1,31 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <router-link :to="{ name: 'home' }" class="navbar-brand">LOGO</router-link>
-      <router-link
-        :to="{ name: 'login' }"
-        class="text-light text-decoration-none"
-        id="navbarNav"
-        href="#"
-        >LOGIN</router-link
-      >
+    <router-link :to="{name: 'login'}" class="navbar-brand">Web App</router-link>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <router-link :to="{name: 'register'}" class="nav-link" href="">REGISTER</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link :to="{name: 'login'}" class="nav-link" href="#">LOGIN</router-link>
+        </li>
+      </ul>
     </div>
   </nav>
   <router-view />
 </template>
 
 <script>
-export default {};
+
+export default {
+}
 </script>
 
 <style>
-body {
-  background: lightgray !important;
-}
+  body {
+    background: lightgray!important;
+  }
 </style>
